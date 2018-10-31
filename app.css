@@ -14,7 +14,10 @@ body {
 }
 
 h1{
+  color: SteelBlue;
+  font-size: 45px;
   text-align: center;
+  padding-top: 30px;
   margin-bottom: 20px;
   line-height: 1;
 }
@@ -24,29 +27,33 @@ h1{
   justify-content: center;
 }
 
-.addBtn {
-  height: 30px;
-  margin: 10px;
+.addBtn:hover, .clearBtn:hover, .clearAll:hover {
+  background-color: SteelBlue;
+  color: white;
+  cursor: pointer;
 }
 
-.clearBtn {
-  height: 30px;
-  margin: 10px;
-}
-
-.clearAll {
+.addBtn, .clearBtn, .clearAll {
+  background-color: Linen;
+  font-weight: bold;
+  color: SteelBlue;
+  border-width: 2px;
+  border-color: SteelBlue;
   height: 30px;
   margin: 10px;
 }
 
 input {
+  background: AliceBlue;
   border: none;
   display: block;
   width: 98.4%;
-  line-height: 1.5;
+  line-height: 3.5;
   padding: 8px 0 8px 10px;
   border-bottom: 1px solid silver;
   outline:0;
+  font-size: 20px;
+  text-align: center;
 }
 
 ul {
@@ -72,6 +79,8 @@ li:before {
 }
 
 li:hover {
+  background-color: SteelBlue;
+  color: white;
   text-decoration: line-through;
   cursor: pointer;
 }
@@ -81,7 +90,8 @@ li:last-child {
 }
 
 .checked {
-  color:green;
+  color:SteelBlue;
+  font-weight: bold;
   text-decoration: line-through;
 }
 .checked:before {

@@ -27,7 +27,6 @@ $(document).ready(function(){
 
   clearBtn.addEventListener('click',function(e){
     e.preventDefault();
-    // window.localStorage.clear()
     var listItems = list.childNodes;
     clearChecked()
     listItems.forEach(function(i){

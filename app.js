@@ -1,19 +1,15 @@
-/*
-listen for click event (edit)
-update text in local storage (with key)
-update display with new text value
 
-
- */
-
+// when document has loaded
 $(document).ready(function(){
 
+  // variables
   var list = document.querySelector('#list');
   var addBtn = document.querySelector('.addBtn');
   var clearBtn = document.querySelector('.clearBtn');
   var clearAll = document.querySelector('.clearAll');
   var item = document.querySelector('#item');
 
+  // add item button click
   addBtn.addEventListener('click',function(e){
     if (item.value.length > 0){
       e.preventDefault();
@@ -25,6 +21,7 @@ $(document).ready(function(){
     }
   },false)
 
+  // clear checked off items click
   clearBtn.addEventListener('click',function(e){
     e.preventDefault();
     var listItems = list.childNodes;
@@ -36,12 +33,14 @@ $(document).ready(function(){
     })
   },false)
 
+  // clear entire list click
   clearAll.addEventListener('click',function(e){
     e.preventDefault();
     window.localStorage.clear()
     list.innerHTML = "";
   },false)
 
+  // check off an item click
   list.addEventListener('click',function(e){
     var t = e.target;
     if(t.classList.contains('checked')){
@@ -52,10 +51,12 @@ $(document).ready(function(){
     store();
   },false)
 
+  // function to store item in localStorage
   function store() {
     window.localStorage.myitems = list.innerHTML;
   }
 
+  // function to clear checked items from localStorage
   function clearChecked() {
     var myItems = window.localStorage.myitems;
     if (myItems.includes("checked")){
@@ -79,6 +80,7 @@ $(document).ready(function(){
     }
   }
 
+  // function to load localStorage items
   function getValues() {
     var storedValues = window.localStorage.myitems;
     if(!storedValues) {
@@ -91,5 +93,7 @@ $(document).ready(function(){
       list.innerHTML = storedValues;
     }
   }
+
+  // calling getValues funtion
   getValues();
 });

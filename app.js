@@ -88,6 +88,7 @@ $(document).ready(function(){
       '<li>Step 1: Learn Javascript</li>'+
       '<li>Step 2: ?</li>'+
       '<li>Step 3: Profit!</li>';
+      store()
     }
     else {
       list.innerHTML = storedValues;
